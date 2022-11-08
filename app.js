@@ -10,6 +10,8 @@ const form = document.querySelector('form');
 const goblinListEl = document.querySelector('.goblins');
 
 /* State */
+let defeatedGoblinsCount = 0;
+let playerHP = 10;
 let goblins = [
     { id: 1, name: 'Bingo', hp: 2 },
     { id: 2, name: 'Bongo', hp: 3 },
@@ -35,6 +37,41 @@ form.addEventListener('submit', (e) => {
 
     displayGoblins();
 });
+
+function goblinClickHandler(goblinData) {
+    if (goblinData.hp <= 0) return;
+    if (Math.random() < 0.33) {
+        goblinData.hp--;
+        alert(`you hit ${goblinData.name}!`);
+    } else {
+        alert(`you tried to hit ${goblinData.name}, but missed!`);
+    }
+
+    if (Math.random() < 0.5) {
+        playerHP--;
+        alert`${goblinData.name} hit you! Ouch!`;
+    } else {
+        alert(`${goblinData.name} tried to hit you, but you dodged the attack!`);
+    }
+
+    if (goblinData.hp === 0) {
+        defeatedGoblinsCount++;
+    }
+
+    if (playerHP === 0) {
+        adventurerImgEl.classList.add('game-over');
+        alert('GAME OVER!!!');
+    }
+
+    adventurerHPEl.textContent = playerHP;
+    defeatedNumberEl.textContent = defeatedGoblinsCount;
+
+    const hpEl = document.getElementById(`goblin-hp-${goblinData.id}`);
+    hpEl.textContent = goblinData.hp < 0 ? 0 : goblinData.hp;
+
+    const faceEl = document.getElementById(`goblin-face-${goblinData.id}`);
+    faceEl.textContent = goblinData.hp > 0 ? '😈' : '🔥';
+}
 
 /* Display Functions */
 function displayGoblins() {
