@@ -16,7 +16,16 @@ let currentId = 3;
 function displayGoblins() {
     goblinListEl.textContent = '';
 
-    for (let goblin of goblins)
+    for (let goblin of goblins) {
+        const goblinEl = renderGoblin(goblin);
+
+        goblinEl.addEventListener('click', () +> {
+            goblinClickHandler(goblin);
+        });
+
+        goblinListEl.append(goblinEl);
+    }
 }
 
+displayGoblins();
 // (don't forget to call any display functions you want to run on page load!)
