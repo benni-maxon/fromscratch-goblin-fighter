@@ -1,6 +1,6 @@
 /* Imports */
 
-import { renderGoblin } from "./render-utils.js";
+import { renderGoblin } from './render-utils.js';
 
 /* Get DOM Elements */
 const goblinListEl = document.querySelector('.goblins');
@@ -21,7 +21,7 @@ function displayGoblins() {
     for (let goblin of goblins) {
         const goblinEl = renderGoblin(goblin);
 
-        goblinEl.addEventListener('click', () +> {
+        goblinEl.addEventListener('click', () => {
             goblinClickHandler(goblin);
         });
 
