@@ -21,9 +21,9 @@ function displayGoblins() {
     for (let goblin of goblins) {
         const goblinEl = renderGoblin(goblin);
 
-        goblinEl.addEventListener('click', () => {
-            goblinClickHandler(goblin);
-        });
+        // goblinEl.addEventListener('click', () => {
+        //     goblinClickHandler(goblin);
+        // });
 
         goblinListEl.append(goblinEl);
     }
