@@ -3,8 +3,11 @@
 import { renderGoblin } from './render-utils.js';
 
 /* Get DOM Elements */
-const goblinListEl = document.querySelector('.goblins');
+const defeatedNumberEl = document.querySelector('#defeated-number');
+const adventurerHPEl = document.querySelector('#adventurer-hp');
+const adventurerImgEl = document.querySelector('#adventurer-img');
 const form = document.querySelector('form');
+const goblinListEl = document.querySelector('.goblins');
 
 /* State */
 let goblins = [
