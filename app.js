@@ -4,6 +4,7 @@ import { renderGoblin } from './render-utils.js';
 
 /* Get DOM Elements */
 const goblinListEl = document.querySelector('.goblins');
+const form = document.querySelector('form');
 
 /* State */
 let goblins = [
@@ -13,6 +14,24 @@ let goblins = [
 let currentId = 3;
 
 /* Events */
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const data = new FormData(form);
+    const goblinName = data.get('goblin-name');
+
+    const newGoblin = {
+        id: currentId,
+        name: goblinName,
+        hp: Math.ceil(Math.random() * 5),
+    };
+
+    currentId++;
+
+    goblins.push(newGoblin);
+
+    displayGoblins();
+});
 
 /* Display Functions */
 function displayGoblins() {
