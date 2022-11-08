@@ -1,5 +1,7 @@
 /* Imports */
 
+import { renderGoblin } from "./render-utils.js";
+
 /* Get DOM Elements */
 const goblinListEl = document.querySelector('.goblins');
 
