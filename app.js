@@ -49,7 +49,7 @@ function goblinClickHandler(goblinData) {
 
     if (Math.random() < 0.5) {
         playerHP--;
-        alert`${goblinData.name} hit you! Ouch!`;
+        alert(`${goblinData.name} hit you! Ouch!`);
     } else {
         alert(`${goblinData.name} tried to hit you, but you dodged the attack!`);
     }
@@ -80,9 +80,9 @@ function displayGoblins() {
     for (let goblin of goblins) {
         const goblinEl = renderGoblin(goblin);
 
-        // goblinEl.addEventListener('click', () => {
-        //     goblinClickHandler(goblin);
-        // });
+        goblinEl.addEventListener('click', () => {
+            goblinClickHandler(goblin);
+        });
 
         goblinListEl.append(goblinEl);
     }
