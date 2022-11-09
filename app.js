@@ -40,7 +40,8 @@ form.addEventListener('submit', (e) => {
 
 function goblinClickHandler(goblinData) {
     if (goblinData.hp <= 0) return;
-    if (Math.random() < 0.33) {
+
+    if (Math.random() < 0.66) {
         goblinData.hp--;
         alert(`you hit ${goblinData.name}!`);
     } else {
