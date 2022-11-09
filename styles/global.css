@@ -17,10 +17,12 @@ body {
     --gutter: 30px;
     --footer-height: 25px;
 
-    font-family: var(--primary-font);
-    background: var(--background);
-    display: grid;
-    grid-template-rows: auto 1fr;
+    font-family: 'Titillium Web', sans-serif;
+    background-color: var(--color2);
+    background-image: url(/assets/elden-background.jpg);
+    background-size: 105%;
+    background-position: center;
+    text-align: center;
 }
 
 header {
@@ -109,7 +111,7 @@ footer {
 }
 
 .adventurer img {
-    width: 250px;
+    width: 350px;
 }
 
 .adventurer {
@@ -204,4 +206,12 @@ form {
 
 label {
     font-size: 2rem;
+}
+
+input {
+    background-color: rgb(190, 183, 173);
+}
+
+button {
+    background-color: rgb(163, 152, 137);
 }
