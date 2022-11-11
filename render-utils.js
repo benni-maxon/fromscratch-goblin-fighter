@@ -1,23 +1,23 @@
-export function renderGoblin(goblinData) {
-    const goblinEl = document.createElement('div');
+export function renderImp(impData) {
+    const impEl = document.createElement('div');
     const faceEl = document.createElement('p');
     const nameEl = document.createElement('p');
     const hpEl = document.createElement('p');
 
-    goblinEl.classList.add('goblin');
+    impEl.classList.add('imp');
 
-    nameEl.textContent = goblinData.name;
-    hpEl.id = `goblin-hp-${goblinData.id}`;
-    hpEl.textContent = goblinData.hp < 0 ? 0 : goblinData.hp;
+    nameEl.textContent = impData.name;
+    hpEl.id = `imp-hp-${impData.id}`;
+    hpEl.textContent = impData.hp < 0 ? 0 : impData.hp;
 
-    faceEl.id = `goblin-face-${goblinData.id}`;
-    faceEl.textContent = goblinData.hp > 0 ? '😈' : '🔥';
+    faceEl.id = `imp-face-${impData.id}`;
+    faceEl.textContent = impData.hp > 0 ? '😈' : '🔥';
 
-    if (goblinData.hp < 0) {
-        goblinEl.classList.add('defeated');
+    if (impData.hp < 0) {
+        impEl.classList.add('defeated');
     }
 
-    goblinEl.append(nameEl, faceEl, hpEl);
+    impEl.append(nameEl, faceEl, hpEl);
 
-    return goblinEl;
+    return impEl;
 }

@@ -129,7 +129,7 @@ footer {
     padding: 20px;
 }
 
-.goblin-stats {
+.imp-stats {
     width: 50%;
     display: flex;
     justify-content: center;
@@ -138,26 +138,26 @@ footer {
     align-items: center;
 }
 
-.goblin-stats input,
-.goblin-stats button {
+.imp-stats input,
+.imp-stats button {
     height: 100px;
     font-family: 'Titillium Web', sans-serif;
 }
 
-.goblin-stats button {
+.imp-stats button {
     font-size: 2em;
 }
 
-.goblin-stats input {
+.imp-stats input {
     font-size: 3rem;
     width: 80%;
 }
 
-.defeated-goblins {
+.defeated-imps {
     text-align: center;
 }
 
-.defeated-goblins p {
+.defeated-imps p {
     font-size: 2rem;
     color: white;
     background-color: rebeccapurple;
@@ -170,7 +170,7 @@ form {
     display: flex;
 }
 
-.goblin {
+.imp {
     cursor: pointer;
     border: solid 3px #5d086d;
     border-radius: 5px;

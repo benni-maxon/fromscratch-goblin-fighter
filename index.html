@@ -7,8 +7,8 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
         <!-- title and favicon -->
-        <title>Goblin Fighter</title>
-        <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
+        <title>Imp Fighter</title>
+        <link rel="icon" type="image/x-icon" href="assets/imp-emoji.png" />
 
         <!-- js -->
         <script type="module" src="app.js"></script>
@@ -23,8 +23,8 @@
     </head>
         <main>
             <div class="adventurer-stats">
-                <div class="defeated-goblins">
-                    <p>You have defeated <span id="defeated-number">0</span> goblins</p>
+                <div class="defeated-imps">
+                    <p>You have defeated <span id="defeated-number">0</span> imp(s)</p>
                     <div class="defeated-list"></div>
                 </div>
                 <div class="adventurer">
@@ -35,16 +35,16 @@
                     <img id="adventurer-img" src="/assets/elden-adventurer.gif" alt="adventurer image" />
                 </div>
             </div>
-            <div class="goblin-stats">
-                <div id="goblin-container">
+            <div class="imp-stats">
+                <div id="imp-container">
                     <form>
-                        <label for="" goblin-name-input>New Goblin:</label>
+                        <label for="" imp-name-input>New Imp:</label>
                         <div id="div-form">
-                            <input name="goblin-name" type="text" />
-                            <button type="submit">Challenge goblin</button>
+                            <input name="imp-name" type="text" />
+                            <button type="submit">Challenge Imp</button>
                         </div>
                     </form>
-                    <div class="goblins"></div>
+                    <div class="imps"></div>
                 </div>
             </div>
         </main>
