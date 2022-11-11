@@ -12,7 +12,7 @@ const goblinContainer = document.getElementById('goblin-container');
 
 /* State */
 let defeatedGoblinsCount = 0;
-let playerHP = 1;
+let playerHP = 10;
 let goblins = [
     { id: 1, name: 'Bingo', hp: 2 },
     { id: 2, name: 'Bongo', hp: 3 },
