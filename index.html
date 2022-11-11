@@ -1,39 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <!-- metadata -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<head>
-    <!-- metadata -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <!-- title and favicon -->
+        <title>Imp Fighter</title>
+        <link rel="icon" type="image/x-icon" href="assets/imp-emoji.png" />
 
-    <!-- title and favicon -->
-    <title>Web App</title>
-    <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
+        <!-- js -->
+        <script type="module" src="app.js"></script>
 
-    <!-- js -->
-    <script type="module" src="app.js"></script>
+        <!-- fonts -->
+        <!-- see https://fonts.google.com/ -->
 
-    <!-- fonts -->
-    <!-- see https://fonts.google.com/ -->
-
-    <!-- css -->
-    <link rel="stylesheet" href="styles/reset.css" />
-    <link rel="stylesheet" href="styles/global.css" />
-    <!-- add link for page specific css -->
-
-</head>
-
-<body>
-    <header>
-        <img class="logo" src="assets/html_css_js.png" alt="logo">
-        <h1>Web App</h1>
-    </header>
-
-    <main>
-
-    </main>
-
-</body>
-
+        <!-- css -->
+        <link rel="stylesheet" href="styles/reset.css" />
+        <link rel="stylesheet" href="styles/global.css" />
+        <!-- add link for page specific css -->
+    </head>
+        <main>
+            <div class="adventurer-stats">
+                <div class="defeated-imps">
+                    <p>You have defeated <span id="defeated-number">0</span> imp(s)</p>
+                    <div class="defeated-list"></div>
+                </div>
+                <div class="adventurer">
+                    <p>
+                        Your HP:
+                        <span id="adventurer-hp">10</span>
+                    </p>
+                    <img id="adventurer-img" src="/assets/elden-adventurer.gif" alt="adventurer image" />
+                </div>
+            </div>
+            <div class="imp-stats">
+                <div id="imp-container">
+                    <form>
+                        <label for="" imp-name-input>New Imp:</label>
+                        <div id="div-form">
+                            <input name="imp-name" type="text" />
+                            <button type="submit">Challenge Imp</button>
+                        </div>
+                    </form>
+                    <div class="imps"></div>
+                </div>
+            </div>
+        </main>
+    </body>
 </html>
