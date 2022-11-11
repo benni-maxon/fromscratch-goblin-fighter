@@ -8,10 +8,11 @@ const adventurerHPEl = document.querySelector('#adventurer-hp');
 const adventurerImgEl = document.querySelector('#adventurer-img');
 const form = document.querySelector('form');
 const goblinListEl = document.querySelector('.goblins');
+const goblinContainer = document.getElementById('goblin-container');
 
 /* State */
 let defeatedGoblinsCount = 0;
-let playerHP = 10;
+let playerHP = 1;
 let goblins = [
     { id: 1, name: 'Bingo', hp: 2 },
     { id: 2, name: 'Bongo', hp: 3 },
@@ -62,6 +63,7 @@ function goblinClickHandler(goblinData) {
     if (playerHP === 0) {
         adventurerImgEl.classList.add('game-over');
         alert('GAME OVER!!!');
+        goblinContainer.innerHTML = '<p id="game-over-message" >GAME OVER</p>';
     }
 
     adventurerHPEl.textContent = playerHP;
@@ -72,6 +74,12 @@ function goblinClickHandler(goblinData) {
 
     const faceEl = document.getElementById(`goblin-face-${goblinData.id}`);
     faceEl.textContent = goblinData.hp > 0 ? '😈' : '🔥';
+}
+
+function gameOverLockout() {
+    if (playerHP === 0) {
+        return;
+    }
 }
 
 /* Display Functions */

@@ -215,3 +215,14 @@ input {
 button {
     background-color: rgb(163, 152, 137);
 }
+
+#game-over-message {
+    font-size: 8em;
+    color: #a52a2a;
+    margin-top: 20%;
+    background-color: rgba(0, 0, 0, 0.555);
+    width: 80%;
+    border-radius: 20px;
+    font-family: fantasy, serif;
+    padding-top: 30px;
+}
